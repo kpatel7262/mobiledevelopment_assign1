@@ -190,7 +190,6 @@
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\Species.cs" />
     <Compile Include="Models\ViewModel\UpdatePet.cs" />
-    <Compile Include="Models\ViewModel\UpdateSpecies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

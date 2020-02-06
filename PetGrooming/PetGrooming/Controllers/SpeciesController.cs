@@ -99,14 +99,14 @@ namespace PetGrooming.Controllers
         }
         // [HttpPost] Update
         [HttpPost]
-        public ActionResult Update(int id, string SpeciesName)
+        public ActionResult Update(int id, string Name)
         {
             string query = "update species set Name=@SpeciesName where SpeciesID=@id";
             SqlParameter[] sqlparams = new SqlParameter[2];
-            sqlparams[0] = new SqlParameter("@SpeciesName", SpeciesName);
+            sqlparams[0] = new SqlParameter("@SpeciesName", Name);
             sqlparams[1] = new SqlParameter("@id",id);
-            Debug.WriteLine("I am trying to edit a species name to "+SpeciesName+"");
-
+            Debug.WriteLine("I am trying to edit a species name to "+ Name + "");
+            db.Database.ExecuteSqlCommand(query, sqlparams);
             //logic for updating the pet in the database goes here
             return RedirectToAction("List");
         }
